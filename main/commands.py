@@ -2,14 +2,13 @@
 # Commands
 ####################
 """Commands should edit data values."""
+from data import Data
+
 
 class Commands():
-    def __init__(self, display, active_scene):
-        self.display = display
-        self.active_scene = active_scene
-        self.scenes = None
+    def __init__(self, data:Data):
+        self.data = data
 
+    def swap_scene(self, target_scene:str):
+         self.data.set_active_scene(target_scene)
 
-
-def swap_scene(input, scene, display):
-    pass

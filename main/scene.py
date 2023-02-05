@@ -3,7 +3,7 @@ class Scene():
     def __init__(self, ascii_list = None):
         self.ascii_objects = []
         if ascii_list:
-            self.ascii_object = ascii_list
+            self.ascii_objects = ascii_list
 
     def add_ascii(self, ascii_object):
         """Add a new object to end of the list."""
@@ -13,12 +13,11 @@ class Scene():
 	    return self.ascii_objects
 
 
-
-        
-
 ###############
-# Title Scene
+# Scene Creation
 ###############
+
+#### Title Scene #####
 # Create Visuals
 f = open('Desktop/git-projects/auto-battler/main/ascii_exhume.txt')
 ascii_exhume = f.read()
@@ -30,12 +29,12 @@ ascii_list = [ascii_exhume, ascii_skull, ascii_text]
 title_scene = Scene(ascii_list)
 
 
-
-
-
 ###############
 # All Scenes
 ###############
 all_scenes = {
     "title_scene": title_scene
 }
+
+# TODO
+# Make a subclass object for each scene instead?

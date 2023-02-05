@@ -17,3 +17,4 @@ class Display():
         for img in self.ascii:
             print(img)
         
+        

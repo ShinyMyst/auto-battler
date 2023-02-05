@@ -7,10 +7,10 @@ class Scene():
 
     def add_ascii(self, ascii_object):
         """Add a new object to end of the list."""
-        ascii_objects.append(ascii_object)
+        self.ascii_objects.append(ascii_object)
 
     def get_ascii(self):
-	return ascii_objects
+	    return self.ascii_objects
 
 
 
@@ -20,9 +20,9 @@ class Scene():
 # Title Scene
 ###############
 # Create Visuals
-f = open('ascii_exhume')
+f = open('Desktop/git-projects/auto-battler/main/ascii_exhume.txt')
 ascii_exhume = f.read()
-f = open('ascii_skull')
+f = open('Desktop/git-projects/auto-battler/main/ascii_skull.txt')
 ascii_skull = f.read()
 ascii_text = 'Rise of the Necromancer'
 # Configure Scene

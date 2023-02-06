@@ -2,13 +2,20 @@
 # Commands
 ####################
 """Commands should edit data values."""
-from data import Data
 
 
 class Commands():
-    def __init__(self, data:Data):
+    def __init__(self, data):
+        # Create reference to data variables
         self.data = data
+        self.display = data.display
+        self.all_scenes = data.all_scenes
+        
+        
+    def set_active_scene(self, scene_name:str):
+        scene = self.all_scenes[scene_name]
+        self.display.set_scene(scene)
+        
 
-    def swap_scene(self, target_scene:str):
-         self.data.set_active_scene(target_scene)
 
+# Changing scene should somehow change what commands are mapped to on this page

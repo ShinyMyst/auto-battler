@@ -1,19 +1,25 @@
 from display import Display
 from data import Data
-from commands import Commands
-from scene import Scenes
+
 
 class Game():
     def __init__(self):
         self.display = Display()
         self.data = Data(self.display)
-        self.commands = Commands(self.data)
-        self.scenes = Scenes(self.commands)
 
 
     def run(self):
         self.display.render()
-        user_input = input('-->')
+
+        while True:
+            user_input = input('-->')
+
+            if user_input == 'q':
+                print("Are you sure you want to quit?")
+                user_input = input('-->')
+                if user_input == 'y':
+                    quit()
+                
 
 
 def main():
@@ -26,5 +32,5 @@ if __name__ == "__main__":
 # TODO
 # Consider seperating files that import each other in same area
 # For example, data uses scene, so they should be in folder
-
+# Fix the quit commands.  Integrate into command files
 

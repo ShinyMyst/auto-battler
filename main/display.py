@@ -15,6 +15,7 @@ class Display():
 
     def render(self):
         """Refreshes terminal & displays all ascii objects in current scene"""
+        print("RENDER")
         for img in self.ascii:
             print(img)
     

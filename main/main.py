@@ -13,18 +13,13 @@ class Game():
 
         while True:
             user_input = input('-->')
-
-            if user_input == 'q':
-                print("Are you sure you want to quit?")
-                user_input = input('-->')
-                if user_input == 'y':
-                    quit()
-                
+            self.data.process_input(user_input)
 
 
 def main():
     game = Game()
     game.run()
+
 
 if __name__ == "__main__":
     main()
@@ -32,5 +27,3 @@ if __name__ == "__main__":
 # TODO
 # Consider seperating files that import each other in same area
 # For example, data uses scene, so they should be in folder
-# Fix the quit commands.  Integrate into command files
-

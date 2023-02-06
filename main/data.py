@@ -22,10 +22,12 @@ class Data():
         self.display.set_scene(scene)
         self.active_scene = scene
         
-    def process_input(input_str):
+    def process_input(self, input_str):
         """Check if current input is an existing scene command.
         Execute if yes.  Return invalid command if not."""
-        pass
+        if self.commands.run_command(input_str):
+            pass
+        else:
+            print("Invalid Command")
     
 # TODO:
-# Process input checks commands in command dict.
